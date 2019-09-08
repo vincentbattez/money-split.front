@@ -9,7 +9,7 @@ $marginBetweenBank: rem(10px) !default;
 
 .bank {
   display: inline-block;
-  width: $width;
+  flex: 0 0 $width;
   height: $height;
   background: $color;
   border-radius: $radius;

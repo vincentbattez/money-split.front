@@ -1,35 +1,45 @@
 import moment from "moment";
 import React, { Component } from "react";
 
-// Components
-import Bank from "components/Bank/Bank";
-import Resume from "components/Resume/Resume";
-
+import { buildClassPage } from "helpers/classMaker";
 import dateConfig from "config/date"
+import "./Dashboad.scss"
+
+// Components
+import BankCollection from "components/BankCollection/BankCollection";
+import Resume from "components/Resume/Resume";
 
 class Dashboard extends Component {
   render() {
+    const classPage = buildClassPage(this);
     const currentMonth = moment().format(dateConfig.month);
     const currentEpargne = 7350.21;
 
-    const bankName = 'LCL';
-    const endCardNumber = 1080;
-    const bankColor = 'red';
+    const bankCollection = [
+      {
+        name: 'LCL',
+        endCardNumber: 1080,
+      },
+      {
+        name: 'N26',
+        endCardNumber: 4125,
+        color: 'grey',
+      },
+      {
+        name: 'Paypal',
+        endCardNumber: 9032,
+        color: 'lightblue',
+      }
+    ];
 
     return (
-      <div>
+      <div className={classPage}>
         <Resume
           month={currentMonth}
           money={currentEpargne}
         />
-        <Bank
-          name={bankName}
-          endCardNumber={endCardNumber}
-          color={bankColor}
-        />
-        <Bank
-          name={bankName}
-          endCardNumber={endCardNumber}
+        <BankCollection
+          bankCollection={bankCollection}
         />
       </div>
     );
