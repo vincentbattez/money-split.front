@@ -1,0 +1,36 @@
+@import "~sass-rem";
+
+$color: #4165f7 !default;
+$width: rem(300px) !default;
+$height: rem(190px) !default;
+$radius: rem(7px) !default;
+$containerPadding: rem(15px 20px) !default;
+$marginBetweenBank: rem(10px) !default;
+
+.bank {
+  display: inline-block;
+  width: $width;
+  height: $height;
+  background: $color;
+  border-radius: $radius;
+  color: white;
+
+  & + & {
+    margin-left: $marginBetweenBank;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: $containerPadding;
+  }
+
+  &__name {
+  }
+
+  &__card-number {
+    text-align: right;
+  }
+}

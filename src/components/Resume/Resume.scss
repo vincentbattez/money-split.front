@@ -4,9 +4,9 @@
   text-align: center;
 
   &__container {
-    width: rem(300px);
-    height: rem(300px);
-    background: red;
+    width: rem(250px);
+    height: rem(250px);
+    background: grey;
     border-radius: 50%;
     display: inline-flex;
     justify-content: center;
@@ -16,10 +16,11 @@
   }
 
   &__money {
-
+    font-size: rem(40px);
+    margin-bottom: rem(10px);
   }
 
   &__month {
-
+    font-size: rem(22px);
   }
 }

@@ -3,18 +3,22 @@ import PropTypes from 'prop-types';
 
 import './Resume.scss'
 
-const Resume = ({ month, money }) => (
-  <section className="resume">
-    <div className="resume__container">
+const Resume = ({ month, money }) => {
+  const formattedMoney = `${money} €`;
+
+  return (
+    <section className="resume">
+      <div className="resume__container">
       <span className="resume__money">
-        { money } €
+        { formattedMoney }
       </span>
-      <span className="resume__month">
+        <span className="resume__month">
         { month }
       </span>
-    </div>
-  </section>
-);
+      </div>
+    </section>
+  );
+};
 
 Resume.propTypes = {
   month: PropTypes.string,
