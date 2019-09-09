@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 
 import "./Bank.scss"
-import { bankType } from "types/Bank.type";
+import bankType from "types/Bank.type";
 
 function Bank({ name, endCardNumber, color }) {
   const formattedCardNumber = `**** **** **** ${endCardNumber}`;

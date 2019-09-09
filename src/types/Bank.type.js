@@ -1,7 +1,7 @@
-import { shape, number, string } from 'prop-types';
+import { number, string } from 'prop-types';
 
-export const bankType = shape({
+export default {
   name: string.isRequired,
   endCardNumber: number.isRequired,
   color: string,
-});
+};

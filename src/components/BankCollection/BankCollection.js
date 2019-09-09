@@ -1,9 +1,9 @@
-import PropTypes from "prop-types";
+import { arrayOf, shape } from "prop-types";
 import React, { memo } from "react";
 
 import "./BankCollection.scss"
 import Bank from "components/Bank/Bank";
-import { bankType } from "types/Bank.type";
+import bankType from "types/Bank.type";
 
 function BankList(bankCollection) {
   if (!bankCollection) {
@@ -35,7 +35,7 @@ function BankCollection({ bankCollection }) {
 }
 
 BankCollection.propTypes = {
-  bankCollection: PropTypes.arrayOf(bankType)
+  bankCollection: arrayOf(shape(bankType))
 };
 
 export default memo(BankCollection);

@@ -1,7 +1,7 @@
 import React, { memo }  from "react";
-import PropTypes from 'prop-types';
 
 import './Resume.scss'
+import resumeType from 'types/Resume.type'
 
 const Resume = ({ month, money }) => {
   const formattedMoney = `${money} €`;
@@ -20,9 +20,6 @@ const Resume = ({ month, money }) => {
   );
 };
 
-Resume.propTypes = {
-  month: PropTypes.string,
-  money: PropTypes.number,
-};
+Resume.propTypes = resumeType;
 
 export default memo(Resume);
