@@ -1,13 +1,16 @@
-import moment from "moment";
+// External dependencies
 import React, { Component } from "react";
+import moment from "moment";
 
+// Internal dependencies
 import { buildClassPage } from "helpers/classMaker";
 import dateConfig from "config/date"
-import "./Dashboad.scss"
-
-// Components
 import BankCollection from "components/BankCollection/BankCollection";
 import Resume from "components/Resume/Resume";
+
+// Local
+import "./Dashboad.scss"
+
 
 export class Dashboard extends Component {
   render () {
@@ -45,5 +48,3 @@ export class Dashboard extends Component {
     );
   }
 }
-
-export default Dashboard;

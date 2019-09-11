@@ -1,10 +1,11 @@
-import React, { memo }  from "react";
+import React, { memo, FunctionComponent }  from "react";
 
+// Internal dependencies
 import './Resume.scss'
-import resumeType from 'types/Resume.type'
+import { ResumeProps } from './Resume.type'
 
-const Resume = ({ month, money }:any) => {
-  const formattedMoney = `${money} €`;
+const Resume: FunctionComponent<ResumeProps> = (props: ResumeProps) => {
+  const formattedMoney = `${props.money} €`;
 
   return (
     <section className="resume">
@@ -13,13 +14,11 @@ const Resume = ({ month, money }:any) => {
         { formattedMoney }
       </span>
         <span className="resume__month">
-        { month }
+        { props.month }
       </span>
       </div>
     </section>
   );
 };
-
-Resume.propTypes = resumeType;
 
 export default memo(Resume);
