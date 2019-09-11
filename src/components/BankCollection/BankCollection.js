@@ -3,7 +3,7 @@ import React, { memo } from "react";
 
 import "./BankCollection.scss"
 import Bank from "components/Bank/Bank";
-import bankType from "types/Bank.type";
+import bankType from "components/Bank/Bank.type";
 
 function BankList(bankCollection) {
   if (!bankCollection) {

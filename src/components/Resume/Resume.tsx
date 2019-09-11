@@ -1,3 +1,4 @@
+// External dependencies
 import React, { memo, FunctionComponent }  from "react";
 
 // Internal dependencies
