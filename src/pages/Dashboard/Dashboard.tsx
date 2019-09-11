@@ -9,8 +9,8 @@ import "./Dashboad.scss"
 import BankCollection from "components/BankCollection/BankCollection";
 import Resume from "components/Resume/Resume";
 
-class Dashboard extends Component {
-  render() {
+export class Dashboard extends Component {
+  render () {
     const classPage = buildClassPage(this);
     const currentMonth = moment().format(dateConfig.month);
     const currentEpargne = 7350.21;
