@@ -29,7 +29,7 @@ export class Dashboard extends Component {
         name: 'Paypal',
         endCardNumber: 9032,
         color: 'lightblue',
-      }
+      },
     ];
 
     return (

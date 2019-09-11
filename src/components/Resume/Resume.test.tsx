@@ -1,4 +1,4 @@
-import Resume from "components/Resume/Resume";
+import Resume from "./Resume";
 
 test("Component: Resume", () => {
   // Given
