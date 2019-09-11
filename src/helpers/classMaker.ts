@@ -1,4 +1,6 @@
-export const buildClassPage = (PageContext) => {
+import { Component } from "react";
+
+export const buildClassPage = (PageContext: string | Component): string => {
   const PREFIX = 'page-';
 
   if (typeof PageContext === 'string') {
