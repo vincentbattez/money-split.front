@@ -1,9 +1,9 @@
 // External dependencies
-import React, {FunctionComponent, memo} from "react";
+import React, { FunctionComponent } from "react";
 
 // Local
 import "./Bank.scss"
-import { BankProps } from "./Bank.type";
+import { BANK_DEFAULT_PROPS, BankProps } from "./Bank.type";
 
 const Bank: FunctionComponent<BankProps> = (props: BankProps) => {
   const formattedCardNumber = `**** **** **** ${props.endCardNumber}`;
@@ -21,4 +21,8 @@ const Bank: FunctionComponent<BankProps> = (props: BankProps) => {
   );
 };
 
-export default memo(Bank);
+Bank.defaultProps = {
+  color: BANK_DEFAULT_PROPS.color
+};
+
+export default Bank;

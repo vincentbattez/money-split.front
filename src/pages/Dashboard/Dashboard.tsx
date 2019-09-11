@@ -22,11 +22,11 @@ export class Dashboard extends Component {
       {
         name: 'LCL',
         endCardNumber: 1080,
+        color: '#3b51d5',
       },
       {
         name: 'N26',
         endCardNumber: 4125,
-        color: 'grey',
       },
       {
         name: 'Paypal',
