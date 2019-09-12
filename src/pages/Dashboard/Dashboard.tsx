@@ -5,8 +5,8 @@ import moment from "moment";
 // Internal dependencies
 import { buildClassPage } from "helpers/classMaker";
 import dateConfig from "config/date"
-import BankCollection from "components/BankCollection/BankCollection";
-import Resume from "components/Resume/Resume";
+import BankCollection from "components/molecules/BankCollection/BankCollection";
+import Resume from "components/atoms/Resume/Resume";
 
 // Local
 import "./Dashboad.scss"

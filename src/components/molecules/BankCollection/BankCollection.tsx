@@ -1,9 +1,9 @@
 // External dependencies
-import React, {FunctionComponent, memo} from "react";
+import React, { FunctionComponent, memo } from "react";
 
 // Internal dependencies
-import Bank from "components/Bank/Bank";
-import { BankProps } from "components/Bank/Bank.type";
+import Bank from "components/atoms/Bank/Bank";
+import { BankProps } from "components/atoms/Bank/Bank.type";
 
 // Local
 import "./BankCollection.scss"
