@@ -2,20 +2,20 @@
 import React, { FunctionComponent, memo } from "react";
 
 // Internal dependencies
-import Bank from "components/atoms/Bank/Bank";
-import { BankProps } from "components/atoms/Bank/Bank.type";
+import BankContainer from "components/atoms/Bank/Bank.container";
+import { BankContainerProps } from "components/atoms/Bank/Bank.type";
 
 // Local
 import "./BankCollection.scss"
 import { BankCollectionProps } from "./BankCollection.type";
 
-const BankList = (bankCollection: BankProps[]) => {
+const BankList = (bankCollection: BankContainerProps[]) => {
   return (
-    bankCollection.map((bank: BankProps) => {
+    bankCollection.map((bank: BankContainerProps) => {
       const key = `${bank.name}-${bank.endCardNumber}`;
 
       return (
-        <Bank
+        <BankContainer
           key={key}
           name={bank.name}
           endCardNumber={bank.endCardNumber}
