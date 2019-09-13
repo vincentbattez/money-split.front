@@ -2,7 +2,7 @@
 import React, { FunctionComponent, memo } from "react";
 
 // Internal dependencies
-import BankContainer from "components/atoms/Bank/Bank.container";
+import BankContainer from "components/atoms/Bank";
 import { BankContainerProps } from "components/atoms/Bank/Bank.type";
 
 // Local

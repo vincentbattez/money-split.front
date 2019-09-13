@@ -5,8 +5,8 @@ import moment from "moment";
 // Internal dependencies
 import { buildClassPage } from "helpers/classMaker";
 import dateConfig from "config/date"
-import BankCollectionContainer from "components/molecules/BankCollection/BankCollection.container";
-import ResumeContainer from "components/atoms/Resume/Resume.container";
+import BankCollectionContainer from "components/molecules/BankCollection";
+import ResumeContainer from "components/atoms/Resume";
 
 // Local
 import "./Dashboad.scss"
@@ -17,7 +17,6 @@ export class Dashboard extends Component {
     const classPage = buildClassPage(this);
     const currentMonth = moment().format(dateConfig.month);
     const currentEpargne = 7350.21;
-
     const bankCollection = [
       {
         name: 'LCL',
