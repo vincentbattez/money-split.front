@@ -3,9 +3,9 @@ import { render } from 'react-dom';
 
 import 'style/App.scss'
 
-import { Dashboard } from "pages/Dashboard/Dashboard";
+import DashboardContainer from "pages/Dashboard";
 
 render(
-  <Dashboard />,
+  <DashboardContainer />,
   document.getElementById('root'),
 );

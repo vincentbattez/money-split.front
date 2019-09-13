@@ -1,49 +1,25 @@
 // External dependencies
-import React, { Component } from "react";
-import moment from "moment";
+import React, { FunctionComponent } from "react";
 
 // Internal dependencies
-import { buildClassPage } from "helpers/classMaker";
-import dateConfig from "config/date"
-import BankCollectionContainer from "components/molecules/BankCollection";
 import ResumeContainer from "components/atoms/Resume";
+import BankCollectionContainer from "components/molecules/BankCollection";
 
 // Local
 import "./Dashboad.scss"
+import { DashboardPropsType } from "./Dashboard.type";
 
 
-export class Dashboard extends Component {
-  render () {
-    const classPage = buildClassPage(this);
-    const currentMonth = moment().format(dateConfig.month);
-    const currentEpargne = 7350.21;
-    const bankCollection = [
-      {
-        name: 'LCL',
-        endCardNumber: 1080,
-        color: '#3b51d5',
-      },
-      {
-        name: 'N26',
-        endCardNumber: 4125,
-      },
-      {
-        name: 'Paypal',
-        endCardNumber: 9032,
-        color: 'lightblue',
-      },
-    ];
+const Dashboard: FunctionComponent<DashboardPropsType> = ({page, resume, bankCollection}: DashboardPropsType) => (
+  <div className={page.classPage}>
+    <ResumeContainer
+      money={resume.money}
+      month={resume.month}
+    />
+    <BankCollectionContainer
+      bankCollection={bankCollection.bankCollection}
+    />
+  </div>
+);
 
-    return (
-      <div className={classPage}>
-        <ResumeContainer
-          money={currentEpargne}
-          month={currentMonth}
-        />
-        <BankCollectionContainer
-          bankCollection={bankCollection}
-        />
-      </div>
-    );
-  }
-}
+export default Dashboard

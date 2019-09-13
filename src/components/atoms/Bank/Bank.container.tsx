@@ -15,7 +15,7 @@ const BankContainer: FunctionComponent<BankContainerProps> = (props: BankContain
     <Bank
       style={style}
       name={props.name}
-      endCardNumber={formattedCardNumber}
+      cardNumber={formattedCardNumber}
     />
   );
 };

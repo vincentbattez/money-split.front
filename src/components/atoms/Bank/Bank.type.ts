@@ -8,7 +8,7 @@ export interface BankContainerProps {
 
 export interface BankProps {
   name: string,
-  endCardNumber: string,
+  cardNumber: string,
   style?: CSSProperties
 }
 
