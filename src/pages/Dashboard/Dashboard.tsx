@@ -5,7 +5,7 @@ import moment from "moment";
 // Internal dependencies
 import { buildClassPage } from "helpers/classMaker";
 import dateConfig from "config/date"
-import BankCollection from "components/molecules/BankCollection/BankCollection";
+import BankCollectionContainer from "components/molecules/BankCollection/BankCollection.container";
 import ResumeContainer from "components/atoms/Resume/Resume.container";
 
 // Local
@@ -41,7 +41,7 @@ export class Dashboard extends Component {
           money={currentEpargne}
           month={currentMonth}
         />
-        <BankCollection
+        <BankCollectionContainer
           bankCollection={bankCollection}
         />
       </div>

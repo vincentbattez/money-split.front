@@ -9,6 +9,12 @@ import { BankContainerProps } from "components/atoms/Bank/Bank.type";
 import "./BankCollection.scss"
 import { BankCollectionProps } from "./BankCollection.type";
 
+const BankCollection: FunctionComponent<BankCollectionProps> = (props: BankCollectionProps) => (
+  <section className="bank-collection">
+    {BankList(props.bankCollection)}
+  </section>
+);
+
 const BankList = (bankCollection: BankContainerProps[]) => {
   return (
     bankCollection.map((bank: BankContainerProps) => {
@@ -25,11 +31,5 @@ const BankList = (bankCollection: BankContainerProps[]) => {
     })
   )
 };
-
-const BankCollection: FunctionComponent<BankCollectionProps> = (props: BankCollectionProps) => (
-  <section className="bank-collection">
-    {BankList(props.bankCollection)}
-  </section>
-);
 
 export default memo(BankCollection);
