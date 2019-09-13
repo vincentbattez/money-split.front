@@ -6,13 +6,11 @@ import './Resume.scss'
 import { ResumeProps } from './Resume.type'
 
 const Resume: FunctionComponent<ResumeProps> = (props: ResumeProps) => {
-  const formattedMoney = `${props.money} €`;
-
   return (
     <section className="resume">
       <div className="resume__container">
       <span className="resume__money">
-        { formattedMoney }
+        { props.money }
       </span>
         <span className="resume__month">
         { props.month }

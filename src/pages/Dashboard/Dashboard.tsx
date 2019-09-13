@@ -6,7 +6,7 @@ import moment from "moment";
 import { buildClassPage } from "helpers/classMaker";
 import dateConfig from "config/date"
 import BankCollection from "components/molecules/BankCollection/BankCollection";
-import Resume from "components/atoms/Resume/Resume";
+import ResumeContainer from "components/atoms/Resume/Resume.container";
 
 // Local
 import "./Dashboad.scss"
@@ -37,9 +37,9 @@ export class Dashboard extends Component {
 
     return (
       <div className={classPage}>
-        <Resume
-          month={currentMonth}
+        <ResumeContainer
           money={currentEpargne}
+          month={currentMonth}
         />
         <BankCollection
           bankCollection={bankCollection}
