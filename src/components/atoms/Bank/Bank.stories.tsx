@@ -2,11 +2,9 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 // import { action } from '@storybook/addon-actions';
 
-import BankContainer from './Bank.container';
+import { BankCollectionMock } from 'mocks/Bank.mock'
 
-export const name = 'LCO';
-export const endCardNumber = 1234;
-export const color = 'blue';
+import BankContainer from './index';
 
 // export const actions = {
 //   colorBlue: action('colorBlue'),
@@ -15,14 +13,14 @@ export const color = 'blue';
 storiesOf('Bank', module)
   .add('default', () =>
     <BankContainer
-      name={name}
-      endCardNumber={endCardNumber}
+      name={BankCollectionMock[0].name}
+      endCardNumber={BankCollectionMock[0].endCardNumber}
     />
   )
   .add('colorBlue', () =>
     <BankContainer
-      name={name}
-      endCardNumber={endCardNumber}
-      color={color}
+      name={BankCollectionMock[1].name}
+      endCardNumber={BankCollectionMock[1].endCardNumber}
+      color={BankCollectionMock[1].color}
     />
   );

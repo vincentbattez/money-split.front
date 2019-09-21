@@ -9,7 +9,8 @@ $marginBetweenBank: rem(10px) !default;
 
 .bank {
   display: inline-block;
-  flex: 0 0 $width;
+  width: $width;
+  flex-shrink: 0;
   height: $height;
   background: $color;
   border-radius: $radius;
@@ -24,13 +25,16 @@ $marginBetweenBank: rem(10px) !default;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    box-sizing: border-box;
     padding: $containerPadding;
   }
 
   &__name {
+    margin: 0;
   }
 
   &__card-number {
     text-align: right;
+    margin: 0;
   }
 }
