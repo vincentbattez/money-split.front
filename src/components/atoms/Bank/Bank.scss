@@ -1,4 +1,5 @@
 @import "~sass-rem";
+@import "style/global/variables";
 
 $color: #4165f7 !default;
 $width: rem(300px) !default;
@@ -6,6 +7,8 @@ $height: rem(190px) !default;
 $radius: rem(7px) !default;
 $containerPadding: rem(15px 20px) !default;
 $marginBetweenBank: rem(10px) !default;
+$transition: $_transition !default;
+$hoverTranslateY: $_hoverTranslateY !default;
 
 .bank {
   display: inline-block;
@@ -15,6 +18,16 @@ $marginBetweenBank: rem(10px) !default;
   background: $color;
   border-radius: $radius;
   color: white;
+  cursor: pointer;
+  transition: transform $transition;
+
+  &:hover,
+  &:focus {
+    transform: translateY($_hoverTranslateY);
+  }
+  &:active {
+    transform: translateY($_hoverTranslateY) scale(.97);
+  }
 
   & + & {
     margin-left: $marginBetweenBank;

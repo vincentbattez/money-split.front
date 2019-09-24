@@ -10,7 +10,10 @@ import "./BankCollection.scss"
 import { BankCollectionProps } from "./BankCollection.type";
 
 const BankCollection: FunctionComponent<BankCollectionProps> = (props: BankCollectionProps) => (
-  <section className="bank-collection">
+  <section
+    tabIndex={-1}
+    className="bank-collection"
+  >
     {BankList(props.bankCollection)}
   </section>
 );

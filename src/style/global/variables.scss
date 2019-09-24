@@ -1,1 +1,12 @@
-$_bodyFontSize: 16;
+@import "~sass-rem";
+
+// Size
+$_bodyFontSize: 16 !default;
+
+// Bank
+$_hoverTranslateY: rem(-5px) !default;
+
+// Transitions
+$_transition-speed: 100ms !default;
+$_transition: 300ms !default;
+$_transition-slow: 500ms !default;

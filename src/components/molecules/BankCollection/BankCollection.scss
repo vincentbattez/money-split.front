@@ -1,4 +1,9 @@
+@import "style/global/variables";
+
+$hoverTranslateY: -$_hoverTranslateY !default;
+
 .bank-collection {
   display: flex;
   overflow: auto;
+  padding-top: $hoverTranslateY;
 }

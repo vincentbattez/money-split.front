@@ -7,7 +7,12 @@ import { BankProps } from "./Bank.type";
 
 const Bank: FunctionComponent<BankProps> = (props: BankProps) => {
   return (
-    <article className="bank" style={props.style}>
+    <article
+      className="bank"
+      style={props.style}
+      tabIndex={0}
+      role="button"
+    >
       <div className="bank__container">
         <p className="bank__name">{ props.name }</p>
         <p className="bank__card-number">{ props.cardNumber }</p>
