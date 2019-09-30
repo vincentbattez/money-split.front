@@ -15,6 +15,7 @@ storiesOf('Bank', module)
     <BankContainer
       name={BankCollectionMock[0].name}
       endCardNumber={BankCollectionMock[0].endCardNumber}
+      money={BankCollectionMock[0].money}
     />
   )
   .add('colorBlue', () =>
@@ -22,5 +23,6 @@ storiesOf('Bank', module)
       name={BankCollectionMock[1].name}
       endCardNumber={BankCollectionMock[1].endCardNumber}
       color={BankCollectionMock[1].color}
+      money={BankCollectionMock[1].money}
     />
   );

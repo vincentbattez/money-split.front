@@ -21,18 +21,24 @@ export default class DashboardContainer extends Component<{}> {
     const bankCollection = {
       bankCollection: [
         {
+          id: 1,
           name: 'LCL',
           endCardNumber: 1080,
           color: '#3b51d5',
+          money: 2540.50,
         },
         {
+          id: 2,
           name: 'N26',
           endCardNumber: 4125,
+          money: 600,
         },
         {
+          id: 3,
           name: 'Paypal',
           endCardNumber: 9032,
           color: 'lightblue',
+          money: 21.03,
         },
       ]
     };

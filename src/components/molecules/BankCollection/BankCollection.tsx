@@ -29,6 +29,7 @@ const BankList = (bankCollection: BankContainerProps[]) => {
           name={bank.name}
           endCardNumber={bank.endCardNumber}
           color={bank.color}
+          money={bank.money}
         />
       )
     })
